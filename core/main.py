@@ -8,6 +8,9 @@ bot = telebot.TeleBot(API_TOKEN)
 translator = Translator()
 
 
+
+# this code translate your message to persen
+
 @bot.message_handler(func=lambda message: True)
 def translate_message(message):
     #detection = translator.detect(message.text)
@@ -18,8 +21,7 @@ def translate_message(message):
 
 
 
-
-
+# this code translate your message to japenese
 
 # @bot.message_handler(regexp="ja")
 # def to_ja_message(message):
@@ -29,22 +31,13 @@ def translate_message(message):
 
 
 
+# this code translate your message to french
+
 # @bot.message_handler(regexp="fr")
 # def to_fr_message(message):
 #     translated_text = translator.translate(message.text, dest="fr", src="fa")
 #     print(translated_text)
 #     bot.reply_to(message, translated_text.text)
-
-
-
-# @bot.message_handler(func=lambda message: True)
-# def welcome_message(message):
-#    translated_text = translator.translate(message.text, dest="fa", src="en")
-#    print (translated_text)
-#    bot.reply_to(message, translated_text.text)
-
-# translation = translator.translate("Wie gehts ?", src="de")
-# print(f"{translation.origin} ({translation.src}) --> {translation.text} ({translation.dest})")
 
 
 
